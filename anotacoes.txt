@@ -1,0 +1,13 @@
+# Clever Programmer
+https://www.youtube.com/channel/UCqrILQNl5Ed9Dz6CGMyvMTQ
+
+# Start
+npx create-react-app amazon-clone
+npm start
+
+# Dependencies
+npm install -g firebase-tools
+
+# Database 
+FIREBASE (firebase hosting)
+-Copy config file into => firebase.js, file in src
