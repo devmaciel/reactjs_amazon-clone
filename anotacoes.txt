@@ -8,6 +8,14 @@ npm start
 # Dependencies
 npm install -g firebase-tools
 
+npm install @material-ui/core
+npm install @material-ui/icons
+
 # Database 
 FIREBASE (firebase hosting)
 -Copy config file into => firebase.js, file in src
+
+# VSCode - Snippets/Extensions
+es7 (react/redux/etc) [rfce] 
+prettier (format on save)
+autosave afterDelay
