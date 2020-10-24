@@ -1,3 +1,6 @@
+# TODO
+ctrl+shift+f TODO
+
 # Clever Programmer
 https://www.youtube.com/channel/UCqrILQNl5Ed9Dz6CGMyvMTQ
 
@@ -7,6 +10,8 @@ npm start
 
 # Dependencies
 npm install -g firebase-tools
+npm install react-router-dom
+npm install react-currency-format
 
 npm install @material-ui/core
 npm install @material-ui/icons
