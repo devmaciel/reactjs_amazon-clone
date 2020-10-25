@@ -1,8 +1,11 @@
+import { auth } from './firebase'; //const auth of firebase.js
 import React, { useState } from 'react'
-import { Link } from 'react-router-dom'
+import { Link, useHistory } from 'react-router-dom'
 import './Login.css'
 
 function Login() {
+
+    const history = useHistory();
 
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
@@ -11,12 +14,30 @@ function Login() {
         e.preventDefault();
 
         //Firebase Login
+        auth
+            .signInWithEmailAndPassword(email, password)
+            .then(auth => {
+                // console.log(auth);
+                history.push('/')
+            })
+            .catch(error => alert(error.message))
     }
 
     const register = e => {
         e.preventDefault();
 
         //Firebase Register
+        auth
+            .createUserWithEmailAndPassword(email, password)
+            .then((auth) => {
+                // it successfuly created a new user with email and password
+                // console.log(auth);
+                if (auth) {
+                    history.push('/')
+                }
+            })
+            .catch(error => alert(error.message))
+            
     }
 
     return (
@@ -62,7 +83,6 @@ function Login() {
 
                 <button 
                     className="login__registerButton"
-                    type="submit"
                     onClick={register}
                 >
                     Create your Amazon Account

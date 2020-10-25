@@ -1,3 +1,4 @@
+import { auth } from './firebase'; //const of firebase.js file, not the module
 import React from 'react';
 import './Header.css';
 import SearchIcon from "@material-ui/icons/Search";
@@ -8,7 +9,13 @@ import { useStateValue } from './StateProvider';
 function Header() {
 
     //state, dispatch
-    const [{ basket }, dispatch] = useStateValue();
+    const [{ basket, user }, dispatch] = useStateValue();
+
+    const handleAuthentication = () => {
+        if (user) {
+            auth.signOut(); //signOut is a func from firebase.auth
+        }
+    }
 
     return (
         <div className="header">
@@ -28,14 +35,14 @@ function Header() {
                 <SearchIcon className="header__searchIcon" />
             </div>
 
-            <div className="header">
-                <Link to='/login'>
-                    <div className="header__option">
+            <div className="header__nav">
+                <Link to={!user && '/login'}>
+                    <div onClick={handleAuthentication} className="header__option">
                         <span className="header__optionLineOn">
-                            Hello Guest
+                            {user ? user.email : 'Hello Guest'}
                         </span>
                         <span className="header__optionLineTwo">
-                            Sign In
+                            {user ? 'Sign Out' : 'Sign In'}
                         </span>
                     </div>
                 </Link>
