@@ -45,9 +45,10 @@
 }
 
 .header__optionBasket {
-	display:flex;
+	display: flex;
 	align-items: center;
 	color: white;
+	margin-top: 6.5px;
 }
 
 .header__basketCount {
