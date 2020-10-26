@@ -25,3 +25,16 @@ FIREBASE (firebase hosting)
 es7 (react/redux/etc) [rfce] 
 prettier (format on save)
 autosave afterDelay
+
+# Deployment
+firebase login
+
+firebase init
+->Hosting
+->Use exist
+->Your project in firebase
+->public directory? build
+->single-page-app? y
+->github auto deploy? y/n
+npm run build
+firebase deploy
