@@ -24,6 +24,7 @@ npm install @material-ui/icons
 FIREBASE (firebase hosting)
 -Copy config file into => firebase.js, file in src
 
+
 # VSCode - Snippets/Extensions
 es7 (react/redux/etc) [rfce] 
 prettier (format on save)

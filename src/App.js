@@ -6,6 +6,7 @@ import Checkout from './Checkout';
 import Header from './Header';
 import Home from './Home';
 import Login from './Login';
+import Orders from './Orders';
 import Payment from './Payment';
 import { useStateValue } from './StateProvider';
 
@@ -47,6 +48,10 @@ function App() {
       <div className="App">
         
         <Switch>
+
+          <Route path="/orders">
+            <Orders />
+          </Route>
 
           <Route path="/login">
             <Login />
