@@ -19,6 +19,7 @@ npm i @stripe/react-stripe-js
 
 npm install @material-ui/core
 npm install @material-ui/icons
+npm install moment
 
 # Database 
 FIREBASE (firebase hosting)
@@ -42,12 +43,16 @@ firebase init
 npm run build
 firebase deploy
 
-# Cloud Functions (backend node.js)
+# Cloud Functions (backend node.js) cd->functions
 firebase init
 ->Functions
 ->which lang? javascript
 ->eslint? y
 ->install dependecies with npm now? y
+
+'after functions implementation'
+    firebase deploy --only functions
+    (need blaze plan, in firebase)
 
 npm i express
 npm i cors
@@ -59,3 +64,16 @@ cardnumber tests: 4242 4242 4242 4242 - 0424 242 4242 ...forever 4242..
 
 # "Stripe" for Tests Payment
 publish key and secret key for test api
+
+# New Versions
+you need to deploy again(firebase init config again and..), the front end
+--npm run build
+if you got new functions too.. deploy the functions.
+--firebase deploy --only functions
+or deploy the two ones.. 
+--firebase deploy
+or for tehc bois
+--npm run build && firebase deploy --only functions
+
+# Remove Hosting
+firebase hosting:disable
