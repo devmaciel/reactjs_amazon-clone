@@ -43,19 +43,19 @@ Página da Firebase/Firestore com o pedido na database.
 
 #### Ferramentas Utilizadas
 
--   React JS
-    -- react-router-dom
-    -- axios
-    -- react-currency-format
-    -- moment
-    -- material/ui-core
-    -- material/ui-icons
+-   React JS <br />
+    -- react-router-dom <br />
+    -- axios <br />
+    -- react-currency-format <br />
+    -- moment <br />
+    -- material/ui-core <br />
+    -- material/ui-icons <br />
     -- react hooks and context api
--   Node JS
-    -- express
+-   Node JS <br />
+    -- express <br />
     -- cors
--   Stripe
-    -- stripe-js
+-   Stripe<br />
+    -- stripe-js<br />
     -- react-stripe-js
 -   Firebase Tools
 -   VSCode
